@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 
 <head>
@@ -24,7 +23,7 @@ body{
   padding:20px;
 }
 
-/* CONTAINER CENTRAL */
+/* CONTAINER */
 
 .container{
   width:100%;
@@ -40,15 +39,15 @@ h1{
   font-size:28px;
 }
 
-/* CARD DOS PRODUTOS */
+/* CARD */
 
 .item{
   background:#1e293b;
-  border-radius:16px;
-  padding:16px;
-  margin-bottom:14px;
+  border-radius:18px;
+  padding:18px;
+  margin-bottom:16px;
   border:1px solid rgba(255,255,255,0.05);
-  box-shadow:0 0 15px rgba(0,0,0,0.15);
+  box-shadow:0 0 25px rgba(0,0,0,0.18);
   transition:0.25s;
 }
 
@@ -60,8 +59,8 @@ h1{
   display:flex;
   align-items:center;
   gap:10px;
+  font-size:17px;
   cursor:pointer;
-  font-size:16px;
 }
 
 .item input[type="checkbox"]{
@@ -83,26 +82,29 @@ h1{
 /* IMAGEM */
 
 .product-image{
-  margin-top:14px;
+  margin-top:18px;
   text-align:center;
 }
 
 .product-image img{
-  width:220px;
-  max-width:100%;
-  border-radius:14px;
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:16px;
+  display:block;
+  margin:auto;
   box-shadow:0 0 20px rgba(0,0,0,0.35);
   transition:0.25s;
 }
 
 .product-image img:hover{
-  transform:scale(1.02);
+  transform:scale(1.03);
 }
 
 /* BOTÃO PREMIUM */
 
 .product-link{
-  margin-top:14px;
+  margin-top:18px;
   display:flex;
   justify-content:center;
 }
@@ -111,10 +113,10 @@ h1{
   background:linear-gradient(135deg,#2563eb,#3b82f6);
   color:white;
   text-decoration:none;
-  padding:12px 18px;
-  border-radius:12px;
+  padding:10px 16px;
+  border-radius:14px;
   font-size:14px;
-  font-weight:bold;
+  font-weight:600;
   transition:0.25s;
   box-shadow:0 0 15px rgba(37,99,235,0.35);
 }
@@ -133,7 +135,7 @@ h1{
   letter-spacing:3px;
 }
 
-/* INFO BOX */
+/* INFO */
 
 .info{
   background:#1e293b;
@@ -163,7 +165,7 @@ h1{
 
 <h1>🛒 Checklist de Produtos</h1>
 
-<!-- ITEM 1 -->
+<!-- ITEM PRINCIPAL -->
 
 <div class="item">
 
@@ -174,13 +176,13 @@ h1{
 
 <div class="product-image">
 <img
-src="https://drive.google.com/uc?export=view&id=1URPo0gjRO0lIJ9VrV4sbXp2WIF4Qp5PC"
-alt="Produto Similar">
+src="https://drive.google.com/thumbnail?id=1URPo0gjRO0lIJ9VrV4sbXp2WIF4Qp5PC&sz=w1000"
+alt="Mussarela">
 </div>
 
 <div class="product-link">
 <a
-href="https://drive.google.com/uc?export=view&id=1URPo0gjRO0lIJ9VrV4sbXp2WIF4Qp5PC"
+href="https://drive.google.com/file/d/1URPo0gjRO0lIJ9VrV4sbXp2WIF4Qp5PC/view?usp=sharing"
 target="_blank">
 🔍 Ver Produto Similar
 </a>
@@ -246,11 +248,13 @@ target="_blank">
 </label>
 </div>
 
-<!-- INFORMAÇÕES -->
+<!-- DIVISOR -->
 
 <div class="divider">
 ────────────
 </div>
+
+<!-- INFORMAÇÕES -->
 
 <div class="info">
 📌 Obs: Favor somar os itens e enviar o valor pelo WhatsApp
@@ -282,7 +286,7 @@ target="_blank">
 
 </div>
 
-<!-- FOOTER ISOLADO -->
+<!-- FOOTER -->
 
 <div class="footer">
 ©️ 2026 Billy Corp. All rights reserved.
