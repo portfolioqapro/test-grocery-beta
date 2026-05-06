@@ -19,11 +19,19 @@ body{
   font-family:Arial,sans-serif;
   background:#0f172a;
   color:white;
-  padding:20px;
   min-height:100vh;
-  display:flex;
-  flex-direction:column;
+  padding:20px;
 }
+
+/* CONTAINER CENTRAL */
+
+.container{
+  width:100%;
+  max-width:700px;
+  margin:0 auto;
+}
+
+/* TÍTULO */
 
 h1{
   text-align:center;
@@ -31,14 +39,16 @@ h1{
   font-size:28px;
 }
 
+/* CARD DOS PRODUTOS */
+
 .item{
   background:#1e293b;
   border-radius:16px;
   padding:16px;
   margin-bottom:14px;
-  transition:0.25s;
   border:1px solid rgba(255,255,255,0.05);
   box-shadow:0 0 15px rgba(0,0,0,0.15);
+  transition:0.25s;
 }
 
 .item:hover{
@@ -49,8 +59,8 @@ h1{
   display:flex;
   align-items:center;
   gap:10px;
-  font-size:16px;
   cursor:pointer;
+  font-size:16px;
 }
 
 .item input[type="checkbox"]{
@@ -59,6 +69,8 @@ h1{
   cursor:pointer;
 }
 
+/* ITEM MARCADO */
+
 .checked{
   opacity:0.55;
 }
@@ -66,6 +78,8 @@ h1{
 .checked label{
   text-decoration:line-through;
 }
+
+/* IMAGEM */
 
 .product-image{
   margin-top:14px;
@@ -76,13 +90,15 @@ h1{
   width:220px;
   max-width:100%;
   border-radius:14px;
-  transition:0.3s;
   box-shadow:0 0 20px rgba(0,0,0,0.35);
+  transition:0.25s;
 }
 
 .product-image img:hover{
   transform:scale(1.02);
 }
+
+/* BOTÃO PREMIUM */
 
 .product-link{
   margin-top:14px;
@@ -107,12 +123,16 @@ h1{
   box-shadow:0 0 20px rgba(59,130,246,0.55);
 }
 
+/* DIVIDER */
+
 .divider{
   text-align:center;
   opacity:0.3;
   margin:20px 0;
   letter-spacing:3px;
 }
+
+/* INFO BOX */
 
 .info{
   background:#1e293b;
@@ -123,13 +143,14 @@ h1{
   border:1px solid rgba(255,255,255,0.05);
 }
 
+/* FOOTER */
+
 .footer{
-  margin-top:auto;
-  padding-top:30px;
   text-align:center;
   font-size:12px;
   opacity:0.55;
-  border-top:1px solid rgba(255,255,255,0.08);
+  margin-top:35px;
+  padding-bottom:10px;
 }
 
 </style>
@@ -137,7 +158,11 @@ h1{
 
 <body>
 
+<div class="container">
+
 <h1>🛒 Checklist de Produtos</h1>
+
+<!-- ITEM 1 -->
 
 <div class="item">
 
@@ -161,6 +186,8 @@ target="_blank">
 </div>
 
 </div>
+
+<!-- OUTROS ITENS -->
 
 <div class="item">
 <label>
@@ -218,6 +245,8 @@ target="_blank">
 </label>
 </div>
 
+<!-- INFORMAÇÕES -->
+
 <div class="divider">
 ────────────
 </div>
@@ -239,8 +268,20 @@ target="_blank">
 </div>
 
 <div class="info">
+💳 Método/Pag: pagamento em domicílio via Alelo Voucher (VR)
+</div>
+
+<div class="divider">
+────────────
+</div>
+
+<div class="info">
 ⚠️ Importante: Chamar no portão (Billy)
 </div>
+
+</div>
+
+<!-- FOOTER ISOLADO -->
 
 <div class="footer">
 ©️ 2026 Billy Corp. All rights reserved.
