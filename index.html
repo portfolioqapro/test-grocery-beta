@@ -69,7 +69,7 @@ h1{
   cursor:pointer;
 }
 
-/* ITEM MARCADO */
+/* ITEM CHECKED */
 
 .checked{
   opacity:0.55;
@@ -77,28 +77,6 @@ h1{
 
 .checked label{
   text-decoration:line-through;
-}
-
-/* IMAGEM */
-
-.product-image{
-  margin-top:18px;
-  text-align:center;
-}
-
-.product-image img{
-  width:160px;
-  height:160px;
-  object-fit:cover;
-  border-radius:16px;
-  display:block;
-  margin:auto;
-  box-shadow:0 0 20px rgba(0,0,0,0.35);
-  transition:0.25s;
-}
-
-.product-image img:hover{
-  transform:scale(1.03);
 }
 
 /* BOTÃO PREMIUM */
@@ -109,19 +87,20 @@ h1{
   justify-content:center;
 }
 
-.product-link a{
+.product-link button{
   background:linear-gradient(135deg,#2563eb,#3b82f6);
   color:white;
-  text-decoration:none;
+  border:none;
   padding:10px 16px;
   border-radius:14px;
   font-size:14px;
   font-weight:600;
+  cursor:pointer;
   transition:0.25s;
   box-shadow:0 0 15px rgba(37,99,235,0.35);
 }
 
-.product-link a:hover{
+.product-link button:hover{
   transform:translateY(-2px);
   box-shadow:0 0 20px rgba(59,130,246,0.55);
 }
@@ -156,6 +135,62 @@ h1{
   padding-bottom:10px;
 }
 
+/* MODAL */
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.75);
+  backdrop-filter:blur(5px);
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+  padding:20px;
+}
+
+.modal-content{
+  background:#1e293b;
+  padding:14px;
+  border-radius:18px;
+  max-width:90%;
+  max-height:90%;
+  position:relative;
+  animation:fadeIn 0.25s ease;
+}
+
+.modal-content img{
+  width:100%;
+  max-width:400px;
+  border-radius:12px;
+  display:block;
+}
+
+.close{
+  position:absolute;
+  top:10px;
+  right:14px;
+  font-size:22px;
+  cursor:pointer;
+  color:white;
+  opacity:0.7;
+}
+
+.close:hover{
+  opacity:1;
+}
+
+@keyframes fadeIn{
+  from{
+    transform:scale(0.95);
+    opacity:0;
+  }
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
+}
+
 </style>
 </head>
 
@@ -165,7 +200,7 @@ h1{
 
 <h1>🛒 Checklist de Produtos</h1>
 
-<!-- ITEM PRINCIPAL -->
+<!-- ITEM -->
 
 <div class="item">
 
@@ -174,18 +209,10 @@ h1{
 🧀 Mussarela (400g)
 </label>
 
-<div class="product-image">
-<img
-src="https://drive.google.com/thumbnail?id=1URPo0gjRO0lIJ9VrV4sbXp2WIF4Qp5PC&sz=w1000"
-alt="Mussarela">
-</div>
-
 <div class="product-link">
-<a
-href="https://drive.google.com/file/d/1URPo0gjRO0lIJ9VrV4sbXp2WIF4Qp5PC/view?usp=sharing"
-target="_blank">
+<button onclick="openModal()">
 🔍 Ver Produto Similar
-</a>
+</button>
 </div>
 
 </div>
@@ -248,13 +275,13 @@ target="_blank">
 </label>
 </div>
 
-<!-- DIVISOR -->
+<!-- DIVIDER -->
 
 <div class="divider">
 ────────────
 </div>
 
-<!-- INFORMAÇÕES -->
+<!-- INFO -->
 
 <div class="info">
 📌 Obs: Favor somar os itens e enviar o valor pelo WhatsApp
@@ -292,10 +319,44 @@ target="_blank">
 ©️ 2026 Billy Corp. All rights reserved.
 </div>
 
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">
+✕
+</span>
+
+<img
+src="https://drive.google.com/thumbnail?id=1URPo0gjRO0lIJ9VrV4sbXp2WIF4Qp5PC&sz=w1000"
+alt="Produto Similar">
+
+</div>
+
+</div>
+
 <script>
 
 function toggle(el){
   el.closest('.item').classList.toggle('checked');
+}
+
+function openModal(){
+  document.getElementById('modal').style.display='flex';
+}
+
+function closeModal(){
+  document.getElementById('modal').style.display='none';
+}
+
+window.onclick=function(e){
+  const modal=document.getElementById('modal');
+
+  if(e.target===modal){
+    closeModal();
+  }
 }
 
 </script>
