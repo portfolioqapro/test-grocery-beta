@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checklist de Produtos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    h1 {
+      text-align: center;
+    }
+    .item {
+      background: #1e293b;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .item label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .checked span {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+    .divider {
+      margin: 20px 0;
+      text-align: center;
+      opacity: 0.6;
+    }
+    .info {
+      background: #1e293b;
+      padding: 12px;
+      border-radius: 10px;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+    .footer {
+      margin-top: auto;
+      text-align: center;
+      font-size: 12px;
+      opacity: 0.6;
+      padding-top: 20px;
+    }
+    .product-link {
+      margin-top: 8px;
+      text-align: center;
+    }
+    .product-link a {
+      color: #3b82f6;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🛒 Checklist de Produtos</h1>
+
+<div class="item">
+  <label><input type="checkbox" onchange="toggle(this)"> 🧀 Mussarela (400g)</label>
+  <div class="product-link">
+    <a href="https://exemplo.com/mussarela" target="_blank">Ver produto similar</a>
+  </div>
+</div>
+
+<div class="item">
+  <label><input type="checkbox" onchange="toggle(this)"> 🍌 Banana (1kg)</label>
+  <div class="product-link">
+    <a href="https://exemplo.com/banana" target="_blank">Ver produto similar</a>
+  </div>
+</div>
+
+<div class="item">
+  <label><input type="checkbox" onchange="toggle(this)"> 🍫 Choco Trio Garoto (2)</label>
+  <div class="product-link">
+    <a href="https://exemplo.com/choco-trio" target="_blank">Ver produto similar</a>
+  </div>
+</div>
+
+<div class="item">
+  <label><input type="checkbox" onchange="toggle(this)"> 🍫 Biz (1)</label>
+  <div class="product-link">
+    <a href="https://exemplo.com/biz" target="_blank">Ver produto similar</a>
+  </div>
+</div>
+
+<div class="item">
+  <label><input type="checkbox" onchange="toggle(this)"> 🥚 Ovos (12)</label>
+  <div class="product-link">
+    <a href="https://exemplo.com/ovos" target="_blank">Ver produto similar</a>
+  </div>
+</div>
+
+<div class="item">
+  <label><input type="checkbox" onchange="toggle(this)"> 🍋 Limões (5)</label>
+  <div class="product-link">
+    <a href="https://exemplo.com/limoes" target="_blank">Ver produto similar</a>
+  </div>
+</div>
+
+<div class="item">
+  <label><input type="checkbox" onchange="toggle(this)"> 🍪 Biscoito Bauducco (1)</label>
+  <div class="product-link">
+    <a href="https://exemplo.com/biscoito" target="_blank">Ver produto similar</a>
+  </div>
+</div>
+
+<div class="item">
+  <label><input type="checkbox" onchange="toggle(this)"> 🥬 Alface (1)</label>
+  <div class="product-link">
+    <a href="https://exemplo.com/alface" target="_blank">Ver produto similar</a>
+  </div>
+</div>
+
+<div class="item">
+  <label><input type="checkbox" onchange="toggle(this)"> 🌺 Hibisco (200g)</label>
+  <div class="product-link">
+    <a href="https://exemplo.com/hibisco" target="_blank">Ver produto similar</a>
+  </div>
+</div>
+
+<div class="divider">_________</div>
+
+<div class="info">
+  📌 Obs: Favor somar os itens e enviar o valor pelo WhatsApp
+</div>
+
+<div class="divider">_________</div>
+
+<div class="info">
+  📍 Endereço: Rua xxxxx
+</div>
+
+<div class="divider">_________</div>
+
+<div class="info">
+  ⚠️ Importante: Chamar no portão (Billy)
+</div>
+
+<div class="footer">
+  © 2026 Billy Corp. All rights reserved.
+</div>
+
+<script>
+  function toggle(el) {
+    el.parentElement.classList.toggle('checked');
+  }
+</script>
+
+</body>
+</html>
